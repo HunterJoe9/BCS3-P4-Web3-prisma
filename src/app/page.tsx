@@ -24,7 +24,7 @@ const Home: NextPage = () => {
         
         // const recoverAccount = await personal.ecRecover("Hello", signedToken);
 
-        const response = await axios.post("http://localhost:3000/api/user", {
+        const response = await axios.post(`${process.env.NEXT_PUBLIC_URL}/api/user`, {
           account : account[0],
           email, 
           signedToken,
